@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
   def index
-    render 'home/index'
+    @title = 'Hello Miku'
+  end
+
+  def about
+
   end
 end
