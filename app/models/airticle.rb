@@ -1,2 +1,0 @@
-class Airticle < ApplicationRecord
-end
