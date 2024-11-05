@@ -10,12 +10,20 @@
       <div class="dropdown">
         <%= image_tag 'actions.svg', class: 'dropbtn' %>
         <div class="dropdown-content mini">
-          <a href="#">編集する</a>
+          <%= link_to '編集する', edit_article_path %>
+          <%=
+            link_to '削除する',
+                    article_path,
+                    data: {
+                      method: 'delete',
+                      confirm: '削除しますか？',
+                    }
+          %>
         </div>
       </div>
     </div>
   </div>
-  <div class="article_content">
+  <div class="article_content textarea">
     <%= @article.content %>
   </div>
   <div class="article_heart">
