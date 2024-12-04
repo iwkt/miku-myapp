@@ -20,7 +20,15 @@
   </head>
   <body>
     <header class="header">
-      <p class="header_pageTitle">新着記事</p>
+      <div class="header_logos">
+        <% if !current_page?(root_path) %>
+          <%= link_to :back do %>
+            <%= image_tag 'back.svg', class: 'header_back' %>
+          <% end %>
+          <p class="header_pageTitle">BlogeApp</p>
+          <%= link_to 'ホームに戻る', root_path, class: 'home_btn' %>
+        <% end  %>
+      </div>
       <div class="dropdown">
         <%= image_tag 'default-avatar.png', class: 'header_avatar dropbtn' %>
         <div class="dropdown-content">
