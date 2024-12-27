@@ -1,0 +1,17 @@
+= link_to article_path(id: article.id) do
+  %h2{:style => "color: 'red'"}= article.title
+  .card
+    .card_image
+      = image_tag 'eyecatch1.png'
+    .card_content
+      .card_heart
+        = image_tag 'heart.svg'
+        %span 23
+      .card_detail
+        = image_tag 'default-avatar.png'
+        %div
+          %p cohki0305
+          %p
+            作成日：#{article.display_created_at}
+          %p
+            更新日：#{article.display_updated_at}
